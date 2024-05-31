@@ -1,0 +1,1996 @@
+Arguments : % s
+Initance . -@ family tree
+a graphical display for the inheritance of classes
+Class hierarchy
+Johannes Schmid
+Adding destinations
+Objective : -@ Properties
+Creating a distribution package
+Project settings
+Print settings
+Print settings
+Anjuta -@ team
+
+Creating an executable program
+Error diagnosis
+Glade surface development
+Adding source files
+Anjuta in action
+Project settings
+
+local variables
+local variables
+the symbol - -@ Browser
+Creating a new project
+Adding destinations
+Adding destinations
+Adding destinations
+import projects
+import projects
+Mario Blättermann &lt; mariobl \ @ gnome \ .org &gt; , 2009 , 2010 Jonas Rebmann &lt; jonas \ .rebmann \ @ googlemail \ .com &gt; , 2010 Christian Kirbach &lt; Christian \ .Kirbach \ @ googlemail \ .com &gt; , 2010
+Anjuta IDE --Manual
+v1.0.0
+Manual for Anjuta - -@ IDE
+Naba
+Kumar
+Andy
+Piper
+Biswapesh
+Chattopadhyayr
+
+Schmid
+2001 @ 2002
+2006 @ 2008
+Naba Kumar , Andy Piper and Biswapesh Chattopadhyay
+This document may be copied , distributed distributed / or modified in accordance accordance the the of the GNU Free Free Free License License GGFDL version version any any later version version published by Free Free Software Software without without unable sections sections and without texts on the front and rear book cover .
+Many of the names used by companies to distinguish their products and services are trademarks , where the places where such names in in a GNOME ME -documentation documentation and and the members of the GNOME ME -Documdocumentation project have been informed about these trademarks , the names are written in capital letters or with large initial letters .
+Anjuta @ Manual 2.1.0
+2007
+Johannes Schmidjhs @ gnome.org
+Introduction
+Anjuta is a versatile integrated development environment ( IDE ) for the GNOME --@ desktop desktop providing a variety variety of advanced development methods such as management management , wiwiz, an interactive debugger gger the the surface Glade lade , API API -Help Help Help Devhelp , the memory -@ @ @ Valgrgrind , the performance --ProfilProfiler proprof , a generator generator , powerful source source editor , source code code the -@ browser and more .
+in the following screenshot you will see some of what you will encounter in Anjuta .
+please report all the problems you encounter with using Anjuta - which helps to improve the software as well as the Open --@ Source --@ community .
+first steps with Anjuta
+Menus and key combinations
+The menu bar of the Anjuta of -@ jwindow is the main window . . it , almost the entire functionality of Anjuta can be reached menu menu items . Achave been divided according to the type .
+Menu bar
+Anjuta to -@ Menu bar
+File menu
+Key combinations are available for many menu items . All key combinations are displayed next to the assigned menu item . some other helpful key combinations are listed here .
+Switch editor page : CggImage ↑ ( forward forward ) and StrgImage Image ↓ backbackward . You can also also pages by right-right-clicking the the and and selecting a file enfrom the pop-up menu menu this is useful useful if all are are not visible visible ) ) Some Some environments environments may assigned assigned key key combinations , in case case you have to to y them ( not in Anjuta ) differently if you want to use them in Anjuta .
+Context Help : Shiitching F1 . ve the input input over the word ( e.g. e.g. function name ) for which you want to call API API API -Help Help Help and use this key combination . . ext help only works if DevDevis is installed otherwise the the ext Help menu menu the button in the toolbar are disabled disabled You can can DevDevDevDevDevDevhelp -@ @ website . You will also need to install the corresponding Devhelp --@ books .
+Automatic completion : Ctrl Enter Enter . Position the input mark behind behind an incomplete word and use this key combination . A list of possible completwill be displayed on it .
+further key combinations : look for key combinations displayed to the right of menu entries .
+Adjust keyboard shortcuts
+Key shortcan be changed under Edit Edit Settings in the tab Shortcuts tab .
+
+the main window contains several view windows , which can be rearranged by dragging their respective title bar .
+the document window has only one document active ( if files are opened ) . all file commands affect commands active document . You You to to each document document by clicking clicking clicking the tab tab tab You can also do the same by by clicking clicking on tab tab and selecting the document document document the the poppopwindow window which is especially useful useful many files are open , but not all file file riders are visible .
+the project window contains the tree of the project files when a project is open , otherwise the project window is usually hidden . Double-clicking on any object in the project window opens this file .
+the file window contains a file tree . If no project is open , the file tree usually shows the top folder of the file system . However , this can be adjusted in settings settings . a a project is opened , all files of the project are displayed in the window . Doudouble-click on a file opens it with with the application application as as is specified in the GNOME MIME E -@ settings .
+the symbol window shows a tree of the available symbols in the project , which is formed by processing the ctags .
+there is also a search er in the symbol window where you can search for symbols .
+the message window displays all outputs ( both stdout and stderr ) when an external command is executed . The message window is usually hidden , but is displayed when external commands are executed , such as compiling a file or project project error analysis , search search and many other operations .
+Messages in the preset foreground color ( usually black ) are normal messages . Orange messages are warerts , and red represent errors . Warnings and error messages are linked : a double click on such a message opens the corresponding file in the respective line number .
+For example , if you compile a file containing contains errors , red messages will explain the problems and point the error location , and double-clicking on such a message opens the file and lighting the line with the error .
+the terminal window is a terminal --ememulator where you can enter commands commands in the GNOME ME GNOterminal .
+
+All settings , including window sizes and positions , will be saved when Anjuta j. . A session management is still under development , so you should not terminAnjuta with ununed documents .
+File operations
+create a new file and insert text
+Creating a new file
+To create a new file , select FilesNew in the menu bar , or click the New File button in the toolbar . a new page will appear in the editor ( or a new window if the the parent ? ? ? . . documents documents be named New File 1 , New File 2 , New File 3 , etc .
+
+You should save new documents as soon as possible to avoid data loss as a result of crashes .
+File . -@ Assistant
+Creation wizard for files
+the &quot; Open File &quot; dialog
+a wizard can also be used to create a new file . selecting this File File File File File File the menu bar . . &quot; New New File dialog . . . the the file type and enter the file name . The extension will automatically automatically . You can add add information and a heheader . In case of a C / C + + header , , can also add a a ader template .
+Anjuta occasionally creates new file windows during some operations . For example , some Subversion — -@ @ such as Diff and log log new new file windows output output outoutput there .
+insert macros
+You can use macros to quickly edit repetitive text passages .
+the macro to -@ plugin must be activated .
+
+there are two types of macros : Anjuta --@ macros and users --@ macros ( they are displayed as &quot; My acroacros ) ) Anjuta uta -@ macroacros be be changed , but you can create edit edit users --@ macros .
+To insert a macro , position the input to to the desired location . Edit Edit Macroacroacroacros .... dialog dialog be . . Select macmacmacro from list list . result result of macmacro @ @ implementation is displayed in the window and a summary summary displayed in the dialog dialog . Select Pasert . The implemented macro text is inserted at the current position of the input mark .
+Macro
+the macro . -@ dialog
+another way to insert macros is to Edit Edit sert Macro ro Macro ... and then press the desired macro --@ key combination .
+define macros
+In the Insert Macro ro window window or or or Edit Edit Edit acroro ro ro ro ... ... the Add Add Add Edit Edit Edit . . the the name of macmacro ro , or define define category category and a key key combination . edit edit text to to macro ro . character character _ _ BAR _ indicates indicates the position of the input after after after the macmacro . OK OK the macmacro be added to the list .
+You can also delete a macro by selecting it in the list in the list , which of of course only possible with users to -@ macros ( &quot; My Macros &quot; ) .
+Add / edit macro
+Add / Edit dialog
+Similarly , you can edit and change a macro by selecting it in the list and selecting Edit .
+Macro @ keywords
+They can be included in macro --@ definitions . Macro --@ @ and and end with the character &quot; @ . &quot;
+Keyword . -@ macro
+the keyword . -@ macro
+available macro . -@ Keywords are @ DATE _ TIME @ , @ DATE _ YMD @ , @ DATE _ Y @ , @ USER _ NAME @ , @ FILE _ NAME @ , @ FILE _ NAME _ UP @ , @ FILE _ NAME _ UP _ PREFIX @ , @ EMAIL @ , @ TABSIZE @ , @ INDENTSIZE @ , and @ USETABS @ .
+open and save files
+File dialog
+Open a file : to open an existing file , select File Open from the menu bar bar and click Open button button , or use the combination combination CgO . This opens the Open File dialog dialog . the the of the file file you want to open or select select . . click Open . to open open files files at once you you can several several one by row by holding CCl l ; then Open Open . If you have changed your opinion , you can press Cancel to close the dialog without opening a file .
+dialog for opening multiple files
+the Open File dialog in Multiple file mode
+You can enable the Show hidden hidden setting in the pop-up window , appears appears right-right-opening opening opening opening right-dialog . setting setting setting hidden hidden hidden ( name name with &quot; &quot; &quot; visible visible visible the the list list . this this setting setting not to display hidden hidden . The opening opening dialog dialog also has a built-in type filter . Select the corresponding file type filter in the dialog , and the file list is limited to files of the selected type .
+Save it as a file
+Save a file : To save a file , select select Save from the menu bar and click the Save button in the toolbar , or press CtrS . . If the file is new , the Save dialog dialog will open . enter a file name and click Save to save the new file from the specified name .
+automatic storage of a file
+If automatic saving is enabled , Anjuta does not automatically save new files . You must not save save yourself . . same same applies for the All All All Anjuta does save save save new files until you have yet saved them yourself .
+Save a file among other names : You can explicitly save save file under a new name . selecting File Save as from the menu menu . . Save Save dialog dialog is opened and asking you for the new file name .
+Overwrite file when saving
+If you use Save as with an existing file , the original will not be deleted . it remains unchanged since the last saving . If a file with the new file name already exists , a a confirmation dialog is displayed to ensure you want to overwrite it .
+Close a file : To close a file , select close Close from the menu menu , or click Close Close button in tooltoolbar ( can can also a file file clicking the the by clicking clicking &quot; &quot; &quot; &quot; &quot; the tab the the &quot; ) ) , closcurrent current current file . If the file is is new or not , Anjuta will ask if the file should be saved before closing .
+
+Anjuta has a number of features that help you edit source files , and the following sections describe how some of the interesting features are features .
+Editor
+the toolbar for labels
+Editor borders : Editor tors are are to the left of the editor and are used for some certain purposes . There are three editor available available : row row row , , the er and and the for text text text . By By default ( i.e. at the first start of Anjuta uta only the edge for text foltext is visible .
+The Rfor line numbers bers the largest of all all three ( and a a dardarker the others others and and fies the the numbers of a document . . line for line numbers can be displayed or hidden hidden hidden the VieVieVieVietorfor for for Numnumbers numbers . A ft-click on the edge marks an whole line ( including the line break , if available ) .
+A click on nodes in the folding tree foldown or or or --blocks blocks blocks . . underis is below a folfolded to to to that that code code --@ block block been folded the the line For For more information information , , , read the Text ding Folding below .
+hidden margin
+Editor edges in case of invisible marking edges
+If the marker is not visible , Anjuta uta markings as the background color of a line . For example , if a marking of a point point is set a line and and the marking is is visible visible visible this line line displayed with a red background background background background background background background be be be be or similar similar a a bookbe be a or or yellow . you you not not like this possibly possibly possibly conjunction with the currently used used ) , you can can on the the in in the VieVieEditor Marer menu .
+Machining aids
+Editor with editing aids
+Syntax highlighting
+Anjuta can highlight the syntax of many different languages , usually automatically by automatically ecting the the type type based extension extension extension Anjjuta cannot detect a file type , then syntax highhighlighting is used . can can explicitly force an highlighting mode by selecting the style in the VieEditor highlighting lighting menu .
+Anjuta uses a property file called $ prefix / share / anjuta / properties / anjuta.properties , which has the same format as a SciTE -@ property file file but not not all the properties . style style each element element for all languages is is in the $ fix fix fix / share anjuta uta properties properties stystylesproperties properties properties using some some common properties set by Anjuta in the $ home / .config / anjuta / Scintilltill/ editor editor -@ stystyproperties properties .
+Text
+Anjuta can display code ---folfolfor source source with with structured structured blocks blocks ( such C C C C + + , cal cal , Java Java Java . all code --blocks blocks blocks source files can folfolfoland and and by clicking clicking folding folding folding in the the for code code code @ @ @ @ editor editor @ @ window window window usually a &quot; &quot; - - icon icon icon or arrow arrow down down down down folding folding automatically automatically automatically in files files contain contain the the -@ blocks .
+Code – -@ @ ding is particularly useful when editing very large source files with thousands of lines . Once parts are folded , a document document to be smaller , and easy browsing and editing becomes possible .
+Please note that code --@ @ ding and editing aids are only available in the Sctilltilla â -@ editor .
+automatic formatting of source code
+Anjuta can automatically format C C C C source C C source files files + -@ files ( automatically automatically automatically . . . allows a good good of source source code code improves improves ability ability ability the liklikihood syntax tax tax errors , above all saves saves . . to automatic automatically , select Edit Edit Automatic insertion in the menu line .
+You can browse C and C + + source files and header files in the files using tags tags ? . tag tag ( or symbol refers refers to named entity entity entity as function function definition structure structure , macmacro Anjjsearches searches open C C -@ and C + + source files and headers the -@ files for existing tags .
+Symbol at -@ Browser
+Anjuta automatically searches for tags in all source and headers of -@ @ of an project project . You You jump to function function definition definition definition definition definition definition definition or other tags without opening the corresponding file beforeh. . You don not not have to know in which file the tag was found .
+Day at -@ Comparison
+You don not have to worry about the and and dating dating tag --@ database . Anjuta uta all it all .
+search and replace text in files
+
+To search for a string or a regular expression in the current file , select Edit Search Search Find or press CtrgAltF .
+enter the string to search for for in the field and choose whether it is a normal string or a regular expression . You can also set the search direction , cascascassensitive , and the search area .
+If successful search , Anjuta jumps the search hit or execforms another action ( according to the search action you have in the the get get tab ) .
+If you want to continue the search , click the Find button again or press press Ctrtr, , the next search search next be ( ( ShiShift ft gG for the previous search hit ) . You can change the search text text typing the new string in the search expression text box in the search dialog .
+Search Text dialog
+press the button to stop a long search .
+set the search area
+in the Search Tartab , specify the search area and action action to in in case of search success .
+You can set the maximum number of actions performed .
+Search get dialog
+You can choose which text to search for .
+Choice for &quot; Search in &quot;
+search in files
+set &quot; Search All project files Search Search text text in your project Search .
+enter the text to , , enter the text to to and and set the search settings , such as cassensitive sensitive or only only only full words .
+To search text in multiple files , use the Search field in to enter file patterns . Set the search variables .
+File search pattern
+specify a search
+You can select which action to perform when successful search .
+Depending on the previous selection ( search in , search direction , etc . ) , some operations are not available .
+Choice for the &quot; Search Target &quot; campaign
+replace
+Find and Replace is comparable to the search search , with difference difference that can can also the replacement text text in Replace Retext box , and you can also specify whether you want to be asked before each replacement ( &quot; Replace First hit &quot; and &quot; Replace All Hits &quot; ) .
+Select Replace to replace the match or Next to get to the next match .
+Search settings
+You can also save search options .
+The preselected object specifies search settings that are loaded when Anjuta is started .
+Search Settings dialog
+printing a file
+Print preview for a C @ file
+
+You can view the print preview with File Print Preview preview the current file is mapped and print print preview preview displayed . source highhighlighted lighted lighted lighted highhighlighted lighted lighted in in the ( ( in in the print. . tab tab tab the settings settings editor editor editor --plugins settings settings settings settings allow the expression with line numbers , broken rows and / or headers .
+Print settings
+If you now want to print and are satisfied with the preview , select File Print or Print in the preview window , the print dialog shown below will be opened and select the appropriate print settings and click Print to print the file .
+You can also set portrait or landscape , paper size , page orientation orientation and type type , don &apos;t forget to make the right settings for your printer , otherwise the expression cannot be as expected .
+
+Anjuta has a powerful project management plugin that can open most of the autombased automautomake / autof f and some some fail in some unconfigured projects fail , but as long as the uses automautomake autoautof f in a typical way , it should work .
+create a project from a template
+To create a new project , select the menu item File Project Project ... to start the project the --wizard . Read the first page carefully .
+select the type of application to create on the second page .
+in the last step , check the information entered . click click Finish to create the project .
+Once the project is created , you can test it and create or run it .
+the import process only works if the existing project uses autof f automautomake or in a efefile Makefile .
+load and save projects
+loading projects
+To open a project , select File Open .... Select the project file ( * .anjuta ) in the dialog and click OK .
+If a project has recently opened opened , you will find it in the File menu menu menu , select select the file of of the project from list list and the project will be opened .
+save projects
+the project is automatically saved when closing , because all changes are made directly in the project structure .
+Project structure
+Project window
+the project window
+Groups and Objectives
+Adding Groups
+Select Add Project Group ... and a dialog to add new groups appears .
+select the group within which to add the new group .
+enter the name of the new group and click Add .
+so add a new group ( corresponds to a folder folder automake ake -@ projects ) :
+in Automake ( -@ Projects , a new folder with the specified name is created in the folder of the parent group .
+remove
+Right-click on the group in the Project Management view .
+Select Remove from context menu .
+how to remove a group :
+select the destination type .
+add a new target :
+remove targets
+how to remove a target :
+add and remove files
+Removing source files
+a confirmation dialog is opened and the file is removed from the project .
+the file has not been removed !
+the file is not be removed from the file system , it still exists , and you can add later later desired desired . file file will only removed from the project list list and no longer considered considered for project operations such as compiling , creating or publishing distribution packages .
+$ ( prefix ) : the installation prefix . The project is installed in different subfolders under this prefix .
+$ ( bindir ) : the installation folder for executable files . All your executable files and scripts will be installed in this folder .
+$ ( libdir ) : the installation folder for libraries . All your libraries ( both common and static ) will be installed in this folder or in a subfolder of it .
+some of the most common variables are listed here , and a complete list can be found in the automake info page .
+
+Characteristics ( -@ Dialogue for projects
+
+Properties --@ dialog for groups
+Properties ter-@ Dialogue for Objectives
+compile and create
+compile a file
+
+install a project
+system-wide installation
+the command-line parameters
+folder
+Environment variables
+current environment variables are displayed here in light gray , you can add , change or delete environment variables here .
+Adding source folders
+
+run / Continue
+Protocol a _ nsehen
+
+Address
+Type
+Condition
+Status
+File name : Line number
+Name
+File : function name
+Expressions
+list local variables
+Stacktrace
+stack . -@ window
+
+Thread . -@ Window
+CPU
+
+dynamic libraries
+Core signals
+kernel signals ( -@ window
+Information about files used
+Information about the kernel structure
+Information about global variables
+Information about the current functional arguments
+User command
+
+general questions about the use of Glade
+Widget - -@ Name
+signal
+Settings
+automatically add resources
+Template for handlers
+General
+
+custom tools
+the tool --@ plugin must be activated to use this function .
+Tool --@ examples
+this is a simple example of how to use the tool -@ plugin tool to install the generation script for GNOME --@ change protocols .
+the tool editor
+Authors
+the Anjuta — -@ project was founded by Naba Kumar , on this page you will find all Anjuta --@ contributors .
+visit the project Internet . -@ page http : / / anjuta.org for more information on Anjuta . Errors should be reported in the error detection system on the development page of the project http : / / www.sourceforge.net / projects / anjuta .
+this manual was written by Naba Kumar , Andy Piper , Biswapesh Chattopadhyay and Johannes Schmid . Please send all suggestions suggestions and comments concerning this manual manual the Anjuta DevDevDev--MailMail--@ @ anjuta uta -@ @ vel vel -@ @ @ gnomome.orange .
+License
+this program is free software ; you can redistribute and / or modify it under the terms of the GNU General Public License as published by the Free Software Foundation ; either in version 2 of the license or ( at your choice ) of any newer version .
+the publication of this program will place in the hope that it will be useful to you , but WITITUT UT Y Y ARANANAN, even without without the it warranty of of MARMARREREREor or the the KEFOR FOR A A TMT WWECK .
+a copy of the GNU General Public License is included in the appendix to the GNOME user manual , you can also receive a copy of the GNU General Public License from the Free Software Foundation by going to its website or writing to the Free Software Foundation , Inc.51 Franklin Street , Fifth FloorBoston , MA02111 --@ 1301USA .
+Anjuta
+integrated development environment
+Develop software in an integrated environment
+IDE ; Development ; Programming ;
+autogen is busy
+Definition file &quot; % s &quot; could not be saved : % s
+File &quot; % s &quot; could not be opened : % s
+Text
+Text to be displayed
+Pixbuf . -@ object
+the Pixbuf that is to be displayed .
+the % s component cannot be found
+the registration function &quot; % s &quot; of the component &quot; % s &quot; could not be found
+unknown error in module &quot; % s &quot;
+Column % i
+Column 1
+the file to be opened contains an invalid byte - -@ order .
+Anjuta could not automatically determine the character encoding of the file to be opened .
+missing location for component &quot; % s &quot;
+missing type definition of component &quot; % s &quot;
+Registration of type % s failed component component % failed
+unicode
+
+
+Southern Europe
+
+Cyrillic
+Arabic
+Greek
+Hebrew ( phonetic etic etic ation )
+Hebrew
+Turkish
+Northern Europe
+
+Romanian
+Armenian
+Chinese ( traditional )
+Cyrillic / Russian
+Japanese
+Korean
+Chinese ( Simplified )
+Georgian
+Cyrillic / Ukrainian
+Vietnamese
+Thai
+unknown
+
+text to be displayed to the user for typing in this field
+Environment variables :
+name
+Value
+Path to which stored files refer
+save a file or enter the path here
+Select files
+Path to which all files in the list refer
+Add to -@ Show button
+show a add --@ tonsu &quot; and the &quot; sudossh
+Password . * :
+Command cannot be executed : &quot; % s &quot;
+&quot; execvp &quot; failed
+Anjuta -@ Shell
+the Anjuta -@ shell that will contain the component
+Component &quot; % s &quot; rejects the deactivation
+% s could not be loaded , this often means that your installation is corrupted . The error message was : % s
+
+
+preferred components
+only show components that can be activated by the user
+Here displays the components that user user has as as preferred for a task task task and a component component removed , AnAnuta uta uta uta selection dialog a next dialog .
+selected component
+Select component
+please select the component to be activated
+no component can load other components in % s
+please select the component to be activated
+remember this selection
+Profiles
+current profile . -@ Stack
+
+available components found in components --@ folders .
+activated components
+currently activated components
+the Anjuta @ shell for which the components are created
+Status of Anjuta
+Status of Anjuta used to load and unload the components
+Loading :
+
+General
+Anjuta settings
+Components ( -@ Administration
+the component management to be used
+Profile name
+name of the components -@ profile
+File
+File to match the XML . -@ profile
+please select a component from the list
+&quot; % s &quot; could not be read : XML --@ processing error . invalid or damaged anjuta â -@ components — -@ profile .
+% s : installed from &quot; % s &quot;
+&quot; % s &quot; could not be read . the following required components are missing
+select the objects to save :
+if not saved , all changes are lost .
+
+Object
+Disject changes
+there is a changed object . should it be saved before closing ?
+% 2 must have at least one % 1 @ cinema element .
+the value of the attribute % 1 of the element % 2 can only be % 3 or % 4 , but not % 5 .
+element % 1 must have at least one of the attributes % 2 or % attributes .
+% % 2 must be at least one % 1 – -@ element .
+element % 1 must have at least one of the attributes % 2 or % attributes .
+the element % element must either have a % 2 – -@ attribute or a sequence constructor must be used .
+QXml
+internal general title -@ reference is not allowed in the DTD
+the element % 1 must not be at this point .
+the value of the attribute % 1 of the element % 2 can only be % 3 or % 4 , but not % 5 .
+element % 1 cannot have child elements .
+Attribute redefined .
+% 1 : already available
+Attribute redefined .
+Updates QSql
+Read this entry ? QSql
+Save changes ? QSql
+bestQSql
+Discard changes ?
+
+% 1 , % 2 not defined
+ambiguous % 1 not processed
+Surgery interrupted by users
+line
+User-defined ...
+more ...
+SSL --@ context cannot be created ( % 1 )
+und or empty closure list ( % 1 )
+no certificate can be provided without a key , % 1
+Error when loading the local certificate , % 1
+Error loading the private key , % 1
+private key does not certithe public key ( % 1 )
+SSL -@ session cannot be created % 1
+SSL -@ session cannot be created : % 1
+write not possible : % 1
+Reading error : % 1
+Error in SSL --@ negotiation : % 1QNativeSocketEngine
+
+the name % 1 does not reference a schema --@ type .
+no suitable proxy --@ server can be found
+% 1 cannot be opened : a folder .
+the login to % 1 failed : authentication required .
+Error when downloading % 1 : % 2
+Error when uploading % 1 : % 2
+Operation not supported for % 1
+und URI : % 1QNetworkReply
+Protocolâ â % â â â is unknown
+Operation abor.QNetworkAccessFileBackend
+Request quiry opening a a non--@ local file % 1QNetworkAccessFileBackend
+% 1 cannot be opened : Path is a folder QNetworkAccessFileBackend
+Error opening opening % 1 : % 2
+Error error in % 1 : % 2QNetworkAccessFileBackend
+Socket error to % 1 : % 2
+the remote remote site has terminated the connection prematurely ( % 1 ) QNetworkAccessCacheBackend
+Error opening opening % 1QNetworkReply
+Error downloading % 1 - Responresponsibility : % 2QNetworkAccessFileBackend
+Error reading % 1 : % 2
+no hostname has been specified
+good file name
+unknown address type
+Computer not found QAbstractSocket
+this system does not support IPv6
+Connection to the proxy rejected
+Connection to the proxy terminated prematurely
+Proxy - -@ Calculator not found
+Waiting time for connection to the proxy expired
+Proxy – -@ Authentication failed
+Proxy – -@ Authentication failed : % 1
+Protocol error in SOCKS version 5
+general SOCKSv5 -@ server error
+the SOCKSv5 – -@ server has refused the connection
+Network unreachleQNativeSocketEngine
+Connection rejected QNativeSocketEngine
+TTL expired
+SOCKSv5 @ command is not supported
+Address type is not supported
+Unknown SOCKSv5 . -@ Error code 0x % 1QSocks5SocketEngine
+Waiting time for network for network ationationQNativeSocketEngine
+this socket --@ operation will not supedQNativeSocketEngine
+-@ blocking socket cannot be initializalQNativeSocketEngine
+Broadcast – -@ Socket cannot be initializalQNativeSocketEngine
+Attempted use use use an IPv6 6 socket socket socket a a without without vv6 -@ support.QNativeSocketEngine
+the remote station has terminthe connectionQSocks5SocketEngine
+not sufficient resources available QNativeSocketEngine
+socket --@ operation will not support QNativeSocketEngine
+Protocol type is not supported QNativeSocketEngine
+und socket ( -@ DescriptionQNativeSocketEngine
+Calculator unreachachleQIODevice
+Waiting time for connection expconnecedQNativeSocketEngine
+the bound address is already usedQNativeSocketEngine
+the address is not available QNativeSocketEngine
+the address is protected QNativeSocketEngine
+Datagram is too large to transmingQNativeSocketEngine
+no message can be mailedQNativeSocketEngine
+no cannot receive a newageQNativeSocketEngine
+do not write QNativeSocketEngine
+Network error QNativeSocketEngine
+another socket already occupies the same PortQNativeSocketEngine
+Operation on a non-@ SocketQNativeSocketEngine
+the proxy type is und for this operation
+Waiting time for Socket --@ operation has expired
+socket is not connected
+Go to line
+
+Interrupt
+Switch + F5
+F5
+Single step
+F11
+Skip
+F10
+Leave function
+Shift + F11
+from cursor position
+Ctrl + F10
+to new script
+Switching the breakpoint
+F9
+Read bugger output
+Empty error log
+Empty console
+in script ...
+Ctrl + F
+&amp; Search search
+F3
+search here
+Switch + F3
+Ctrl + G
+Debug
+
+
+Case case sensitive
+whole
+nbsp ; The search has reached the end
+ID
+Address
+Condition
+Number ignored
+single @ shot
+Number of hits
+new
+loaded scripts
+
+Call stack
+local variables
+
+Debbugger output
+Error
+Qt script . -@ Debugger
+Level
+Disable breakpoint
+Activable breakpoint
+Condition for breakpoint :
+% 1 : ftok failed
+QNetworkAccessCacheBackend
+Error opening opening % 1QNetworkAccessCacheBackend
+Error opening opening % 1
+Debongger output Phonon : : MMF
+the audio output . -@ GerttQNativeSocketEngine
+Protocol type is not supported
+Phonon : : MMF : : EffectFactory
+QShortcut
+Phonon : : MMF : : EffectFactory
+
+Alignment Phonon : : MMF : : EffectFactory
+Calculator not found QNativeSocketEngine
+not sufficient resources available
+Address type is not supported
+underline context menu item
+underlined
+% 1 : already available
+404 Not Found Not Found
+
+QIODevice
+Access denied QIBaseResult
+next item cannot be picked
+socket is not connected
+Network unreachleQNativeSocketEngine
+
+Operation not supported for % 1
+good file name
+und URI : % 1
+parse . -@ Error : % 1QNativeSocketEngine
+Protocol type is not supported
+Debbugger output
+QNativeSocketEngine
+
+QNativeSocketEngine
+
+unknown error
+Please check the installation of GStreamer and make sure that the libgstreamer amer -@ plugplugins --@ base is installed .
+a necessary codec is missing . Please install the following codecs for playplayback work : % 0
+the media source cannot be opened .
+source type .
+the media source cannot be found .
+Audio device cannot be opened . it is already used .
+the media source cannot be decoded .
+Note : the ggameramer0.10 --plugplugins --@ good does not seem to be installed , so some video video -@ features have been disabled .
+Note : the basic GStreamer --modules modules do not seem to be installed , so all audio and video video -@ functions have been disabled .
+Volume : % 1 %
+use the slider to adjust the volume d, the the first left position corresponds to 0 % , the right position corresponds to % 1 % .
+
+switch to the device â â % % â Phonon : :
+NotiementPhonon : :
+CommunicationPhonon : :
+Game Phonon : :
+Access default label for Submit buttons in Forms on web pages
+Absendendefault label for Reset buttons in Forms on web pages
+this is a searchable index . Enter keywords : title for file button used in HTML Forms
+File to display in file button used in HTML Forms when no file is selected
+no file selected Open in New Window context menu item
+in new window window Download linked File context menu item
+Save as ... Copy Link context menu item
+Copy link Open Image in New Window context menu item
+Image openDownload Image context menu item
+Image Copy Link context menu item
+Copy image Open Frame in New Window context menu item
+Frame Â ¶ ffnenCopy context menu item
+Select Stop context menu item
+no suggestions found Ignore Spelling context menu item
+Add to the Search The Web context menu item
+on the Internet Look Up in Dictionary context menu item
+in looktertionsOpen Link context menu item
+Contact address Ignore Grammar context menu item
+Spelling menu item title
+Spelling and grammar menu item title
+Hide spelling and grammar Check Spelling context menu item
+Spelling prÂ ¼ fenCheck Spelling while typing context menu item
+Spelling while Writing pr¼ fenCheck grammar with Spelling context menu item
+Grammar and spelling pr¼ fenFont context sub â -@ menu item
+Fonts Bold context menu item
+Outline context menu item
+SurroedWriting direction context sub — -@ menu item
+DirectionText direction context sub . -@ menu item
+Text direction Default writing direction context menu item
+Presault Left to Right context menu item
+right KanteInspect Element context menu item
+Label Label for only item in menu that appears when clicking on the search field image , when no searches have been Performed
+search label for first item in the menu that appears when clicking on the search field image , used as embedded menu title
+search menu item in Recent Searches menu that empties menu &apos;s contents
+related searches unknown filesize FTP directory listing item
+% 1 ( % 2x % 3 pixels ) Media Controller status message when the media is loading
+Media Controller status message when watching a live broadcast
+Media Controller element
+Audio ( -@ ElementMedia Controller element
+Video @ ElementMedia Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Slider . -@ AnfasserMedia Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+elapsed timeMedia Controller element
+Time QShortcut
+Display Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Playback Media Controller element
+Playback of pered Media Controller element
+Media Controller element
+Remove Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media Controller element
+Media time description
+Media time description
+% 1 day % 2 hours % 3 minutes % 4 secondMedia time description
+% 1 hours % 2 minutes % 3 secondMedia time description
+% 1 minutes % 2 secondMedia time description
+% 1 secondQWebPage
+und HTTP ( -@ request
+JavaScript at -@ Note - % 1
+JavaScript at -@ confirmation - % 1
+JavaScript at -@ Command Prompt - % 1
+JavaScript at -@ Command Prompt - % 1
+Move cursor to the next character
+Move cursor to previous character
+Move cursor to the next word
+Move cursor to the previous word
+Move cursor to the next line
+Move cursor to previous line
+Set the cursor at the start of the line
+Set cursor at the end of the line
+Set cursor at the beginning of the block
+Set cursor at the end of the block
+Set cursor at the beginning of the document
+Set cursor at the end of the document
+choose everything
+select to the next sign
+select to the previous character
+choose to the next word
+select to the previous word
+select to the next line
+select to the previous line
+to the beginning of the line
+select to the end of the line
+until the beginning of the block
+select until the end of the block
+until the beginning of the document
+select until the end of the document
+to the beginning of the word
+to the end of the word
+new sales
+new line
+Label label for Submit buttons in Forms on web pages
+
+
+QShortcut
+
+QShortcut
+Right
+parse . -@ Error : % 1QWebPage
+Web --@ Review - % 2
+System
+Restore up
+Restore down
+contains commands to change the window
+brings a maximized window back to the normal size
+moves a window out of the way
+brings a maximized window back to the normal size
+brings the window to full screen mode
+closes the window
+displays the name for the control panel and contains a control panel for change
+remove
+kitchen
+
+
+more
+
+Position
+line line Â ¤ rts
+Rotary controller
+
+Slider . -@ Anfasser
+
+
+
+Floating
+
+Select input method
+Switch for multiple input methods
+Switch for several input methods that the context context of text text --input input ields QPrintPreviewdialog
+Volume : % 1 %
+The outermost left position corresponds to 0 % , the right position corresponds to % 1 % .
+Mute
+switch to to to â â % % â â Phonon : :
+NotiementPhonon : :
+MusikPhonon : :
+VideoPhonon : :
+CommunicationPhonon : :
+Game Phonon : :
+Access helpsName OF TRANSLATORS
+Stephan JohachEMAIL OF TRANSLATORS
+hunsum @ gxm.de
+Please check the installation of GStreamer and make sure that the libgstreamer amer -@ plugplugins is installed @ base is installed .
+a necessary codec is missing . Please install the following codecs for playplayback work : % 0
+Media source cannot be opened .
+invalid source type .
+Media source cannot be found .
+the audio to -@ device cannot be opened . the device is already used otherwise .
+Media source cannot be decoded .
+Note : the gstreameramer0.10 --plugins ins --@ good does not seem to be installed , so some video --@ features have been disabled .
+Note : the basic GStreamer --modules modules do not seem to be installed , so all audio and video video -@ functions have been disabled .
+Phonon Xine @ driver
+ALSA . -@ Standard — -@ OutputThis string is only shown when the KDE runtime is broken , the technical term &apos; Platform Plugin &apos; might help users to find a solution , so it might make sense to leave that term untranslated .
+the platform --@ module does not work . This emergency solution uses the first available ALSA --@ device .
+OSS . -@ Standard — -@ OutputThis string is only shown when the KDE runtime is broken , the technical term &apos; Platform Plugin &apos; might help users to find a solution , so it might make sense to leave that term untranslated .
+the platform . -@ module does not work . This emergency solution uses the first available OSS --@ device .
+JACK Audio Connection Kit
+JACK is an audio --@ server with a short response response . It can connect a variety of different applications to audio audio device and also also it to to audio between between applications JJACK ACK developed from the ground for professional professional work and and development has has two al : synchronsynchronsynchronexecution all all requrequrequand operations with a short response time .
+arts
+arts is the old sound --@ server and the media media -@ basic framework used in KDE 2 and KDE 3 . aRts is outdated and the use is no longer recommended .
+Esound ( ESD )
+uses the outstanding IIR --@ Equalizer @ @ @ @ JohJohansansson the Auddious ious -@ project as as audio audio -@ qualiqualiqualizer ParPar: : ampliampli- sts the the of of all all enly to 10 10 qualiqualizer -@ @ bands - these are the actual equalizer --@ settings .
+Volume
+Top curve
+to volume volume
+Top time
+Start covering
+Parameters : Method : 1 : : a single sample to assiign the variations variations the the samples samples means means the the samples samples ( ( ) ; 2 2 : samples multiple samples to to ign the the variations the the samples ted means over the past samples .
+there is no input . -@ module for MRL &#91; % 1 &#93; .
+no demultiplexer data --module module be found for the specified specified module -@ data .
+there is no demultiplexer ( -@ module for MRL &#91; % 1 &#93; .
+xine cannot generate data stream .
+playback failed because no usable video or audio in -@ output devices are available .
+PulseAudio
+Top curve
+current volume ¤ rke
+Volume ds to which you should be fover
+Ftime in milliseconds
+show or hide with various various curves
+.
+name
+
+
+.
+
+Keyboard control for drawing objects
+/ text / sdraw / guide / keyboard.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+Accessibility ; % PRODUCTNAME Draw
+Drawing objects ; text input mode
+Text input mode for drawing objects
+Keyboard control ( $ &#91; officename &#93; Draw accessibility )
+Drawing objects can be created and edited via the keyboard .
+Create and edit object
+
+
+Rectangle
+or or
+Ellipse
+
+to . -@ Top
+
+to order -@ Down
+arrow key to open the child toolbar , and then press the
+according to . -@ right
+
+to to . -@ Links
+to select an icon .
+Command
+Ctrl
+.
+the object is created in the middle of the current document .
+Command
+Ctrl
+.
+Select object
+Command
+Ctrl
+to switch to the document .
+press the Tab button until the object you want to select is highlighted .
+Fending between two objects
+/ text / sdraw / guide / cross _ fading.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+Drawing objects ; hide two objects
+Fide ; two drawing objects
+Fending between two objects
+in the event of a fending , intermediate forms of two drawing objects are created and distributed in uniform steps between the two objects .
+the command to hide two objects exists only for drawing documents of $ &#91; officename &#93; Draw , not in $ &#91; officename &#93; Impress .
+if you need an object from a fending in a presentation , you can copy it from the drawing document to the presentation document via the clipboard .
+so create a fade between two objects :
+click on the two objects with the Shikey objects .
+edit - Hide .
+Steps
+.
+OK
+.
+a group with the two original objects and the number ( ( steps steps ) of intermediate objects are displayed .
+Show image
+Command
+Ctrl
++ F3 , to terminate the group processing mode .
+edit - hide
+
+/ text / sdraw / guide / text _ enter.xhp
+
+insert ; text frame
+copy ; text from other documents
+insert text from other documents
+Legends ; drawings
+mw changed &quot; adding ; &quot; to &quot; inserting ; &quot;
+Add text
+different types of text can be inserted into a drawing or presentation :
+Text in a text frame
+Text that changes the character size to fill in the frame size .
+Text added to each drawing object by double-clicking on the object .
+Text copied from a writer er -@ document .
+Text inserted from a text or HTML -@ document .
+Adding text boxes
+Text
+Symbol
+and set the mouse pointer where you want to insert the text .
+drag a text frame to the size required in the document .
+enter or paste your text in the text frame .
+double click the text to edit it or format the text properties such as font size or color .
+the frame line color or to arrange the object in front of or behind other objects , click on the frame of the text object .
+Customjust text to frames
+create a text frame as described in the steps above .
+Format - text
+.
+
+Text
+will be opened .
+Text
+the check box
+Adjust height to text
+and then select the check box
+adapt to frame
+.
+
+OK
+.
+now you can change the size of the text frame and thus adjust the size and shape of the text characters .
+Legend
+You can add text to each graphic after double-clicking on the graphic .
+Format - text
+.
+
+Symbol
+to open the toolbar toolbar .
+select a legend and hoover the where legend legend should begin .
+as soon as you want to enter the text in the legend , double click on the line .
+enter the text .
+copy
+mark the text in your Writer ( -@ document .
+Copy
+
+click on the page or slide on which the text to insert be inserted .
+edit - Insert
+or or
+edit - insert content
+
+Insert content
+you can select the text format to insert .
+Depending on the formats , you can copy different text attributes .
+import text
+click on the page or slide to import import text text .
+insert - file
+.
+
+.
+
+Insert text
+will be opened .
+
+OK
+to insert the text .
+
+/ text / sdraw / main0104.xhp
+
+Fishing lines , scans , graphics , objects , symbols and other files .
+
+Level
+Insert fishing point / line ...
+
+Special characters ...
+Hyperlink
+Table
+Diagram
+inserts a diagram .
+
+
+Insert page
+/ text / sdraw / 01 / 04010000.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+add e.g.
+behind 2 2 2 2 , the the old 3 3 , if it existed , now becomes page 4 .
+Extras
+/ text / sdraw / main0106.xhp
+Extras
+here you start the spell ecker or the thesaurus , which can tell you alternative words .
+Car correction ...
+
+Drawing toolbar
+/ text / sdraw / main0210.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+Drawing toolbar
+in the default you can see these symbol quietly below the document .
+Rectangle
+draws a filled rectangle at the point where you drag in the current document .
+click where a corner of the rectangle is to rectplaced and drag it to the size size when the left left mouse button .
+To draw a square , hold down the Shift key when dragging .
+Ellipse
+draws a filled ellipse at the point where you drag in the current document .
+click where the ellipse is to be drawn and drag it to the desired size when the left left mouse button .
+To draw a circle , hold down the Shift key when dragging .
+Text
+draws a text frame at the point where you click and drag in the document .
+click anywhere in the document and enter or paste the desired text .
+
+allows editing points in a drawing .
+Adhesive dots
+allows the processing of adhesive points in a drawing .
+from file
+Form for -@ Controls
+Extrusion on / off
+turns the 3D 3D 3D -@ effects for the selected objects .
+Access to this command ...
+/ text / sdraw / 00 / 00000004.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+Access to this command
+
+/ text / sdraw / main0200.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+
+this section provides an overview of the toolbars in $ &#91; officename &#93; Draw .
+Key combinations for drawings
+/ text / sdraw / 04 / 01020000.xhp
+Key combinations ; in drawings
+Drawings ; key combinations
+Key combinations for drawings
+here you will find a list of key combinations that are only interesting when handling drawing documents .
+Keyshortcuts of $ &#91; officename &#93;
+.
+Funcunction keys for drawing documents
+Key combination
+Effect
+( F2 )
+
+( F3 )
+Entering a grouping
+Command
+Ctrl
++ F3
+Leaving Grogrouping
+( switch ) ( F3 )
+duplicate . -@ dialog
+( F4 )
+Position and size . -@ dialog
+( F5 )
+Navigator
+( F7 )
+Spelling checking
+Command
+Ctrl
++ F7
+Thesaurus
+( F8 )
+Edit edit on / off
+Command
+Ctrl
++ Shift + F8
+Customjust text to frames
+( F11 )
+opens the Style window
+Zoom ; key combinations
+Drawings ; zoom . -@ Function
+Key combinations for drawings
+Key combination
+Effect
+
+increases the view
+
+reduces the view
+× key ( keypad )
+Zoom on the whole page
+÷ button ( numeric kekeypad )
+Zoom in the current selection
+Command
+Ctrl
++ Shift + G
+Group
+Command + option
+Ctrl + alto
+
+Ungrouping
+Command
+Ctrl
++ Shift + K
+Combination
+Command + option
+Ctrl + alto
++ Shift + K
+cancels the combination of the selected objects .
+Command
+Ctrl
++ Shift + +
+forward
+Command
+Ctrl
++ +
+forward
+Command
+Ctrl
+
+further to the back
+Command
+Ctrl
++ switching + -
+to the back
+special keyboard controls for drawing documents
+Key combination
+Effect
+( image on ) button
+switch to the previous page .
+( picture ) button
+switch to the next page .
+Command
+Ctrl
++
+switch to the next level .
+Command
+Ctrl
++ picture
+switch to the previous level .
+Arrow key
+moves the selected object in the direction of the arrow
+Command
+Ctrl
++ Arrow keys
+moves the view of the page in the selected direction .
+Command
+Ctrl
+and drag with the mouse - Note :
+to use this key combination , you must first use the option
+Copy when moving
+under Tools - Options - % PRODUCTNAME Draw - Activable general .
+when moving the selected object , a copy is created .
+Command
+Ctrl
++ Enter when selecting a drawing object from the toolbar ( activate with F6 )
+inserts a drawing object with specified dimensions in the middle of the current view of the document .
+( switch ( F10 )
+calls the context menu of a selected object .
+( F2 )
+if a text from -@ enabled object is selected , the text input mode is activated .
+( Enter )
+if a text from -@ enabled object is selected , the text input mode is activated .
+Command
+Ctrl
++ Enter
+if a text from -@ enabled object is selected , the text input mode is activated .
+if no select a text -@ enabled object , a copy of the current page is created .
+Option
+
+Option
+
+button centcally designed .
+Option
+
+and mouse click on an object
+Selection of overlapping objects .
+Option
+
++ Shift and mouse click on an object
+Selection of overlapping objects .
+the object in front of the currently selected object is selected .
+Object is added to the selection if it has not yet been selected or removed from the selection if it has already been selected .
+Shift and move an object with the mouse
+the selected object is moved exactly horizontselected or verhorizontin the selected tically .
+Switching button when enging / creating
+changes the size , but maintains the aspect ratios .
+( Tab ) button
+Selection of objects in the order of creation from the last to the first object .
+( Esc ) button
+terminates the text input mode of an object .
+the object remains marked .
+Features of $ &#91; officename &#93; Draw
+/ text / sdraw / main0503.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+Features of $ &#91; officename &#93; Draw
+with $ &#91; officename &#93; Draw create simple and complex drawings and export them to numerous common image formats .
+You can also insert tables , charts , formulas , and other elements created in $ &#91; officename &#93; programs into your drawings .
+Vector graphics
+$ &#91; officename &#93; Draw generates vector graphics from lines and curves defined by mathematical vectors .
+Vectors describe lines , ellipses and polygons according to their geometric texture .
+3D - -@ Create objects
+in $ &#91; officename &#93; Draw you can create simple 3D 3D -@ objects such as cubes , spheres or cylinders and even change the light source of the objects .
+Grids and fishing lines
+Grids and fishing lines are optical aids that facilitate the arrangement of objects in your drawing .
+You can also catch an object on a grid line , catch line or edge of another object .
+connect objects to display relationships
+in $ &#91; officename &#93; Draw shows the relationship between different objects with special lines called connectors .
+the connectors are attached to the adhesive points of the drawing objects and do not solve even when the interconnected objects are interconnected .
+Connectors are useful when creating organizational charts and technical drawings .
+Size display
+in technical drawings , the sizes of individual objects are often displayed .
+with $ &#91; officename &#93; Draw , you can calculate and display linear sizes based on dimension lines .
+Gallery
+the gallery contains images , animations , sounds and other elements that you can insert into your drawings or other $ &#91; officename &#93; programs .
+Graphics file formats
+BMP , GIF , JPG and PNG .
+
+/ text / sdraw / main0102.xhp
+
+Search &amp; Replace
+Function .
+Search &amp; replace ...
+
+is used to edit the points of your drawing .
+Adhesive dots
+Adhesive dots
+
+UFI removed Layer command ( as I did in zillion CWSs before ... )
+Links ...
+ImageMap
+Hyperlink
+
+/ text / sdraw / main0100.xhp
+Sun Microsystems , Inc .
+converted from old format - fpe
+
+here you will find the description of all menus with the submenus and the called dialogues .
+to the beginning
+forward
+
+PHP
+back
+forward
+the default config.m4 shown in Example 27 — -@ 1 is a bit more Complex :
+Example 27 – -@ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+Example 38 --@ 1 shows a small demonstration of calling a user function .
+Example 38 - -@ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+PHP defines a set of macros that can be used in this process , the most useful of which are described in Table 41 --1 .
+Table 41 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+Example 28 -@ 1 shows the source .
+Example 28 – -@ 1 .
+Note :
+the module shown earlier in Example 28 - -@ 1 can be enabled with --enable --@ first _ module or --enable --@ first _ module = yes .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+Duplicating Variable Contents :
+API macros
+back
+forward
+PHP
+back
+forward
+Access to initialization entries can also be handled with the macros shown in Table 39 -1 .
+Table 39 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 26 .
+forward
+Note :
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 26 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+Note :
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 26 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 26 .
+forward
+Warning
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 26 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+this might sound a bit confusing at first , but it &apos;s not that complicated ( see Figure 24 -@ 1 ) .
+Figure 24 @ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 25 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 25 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+as shown in Figure 24 . -@ 1 As shown in Figure 24 --@ 1 above , PHP can be extended primarily at three points : external modules , built --@ in modules , and the Zend engine .
+back
+to the beginning
+forward
+
+PHP
+back
+36
+forward
+for examples of these functions , see Beispiel 36 36 -@ .
+Example 36 – -@ 2 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+36
+forward
+Example 36 36 --@ 1 shows a source example and its output .
+Example 36 – -@ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+36
+forward
+Table 36 1 .
+Figure 36 – -@ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+these macros automatically set the correspondent type and value , as described in Table 35 — -@ 1 and Table 35 --2 .
+Note :
+the macros in Table 35 – -@ 1 automatically return from your function , those in Table 35 — -@ 2 only set the return value ; they don &apos;t return from your function .
+Table 35 1 .
+Table 35 2 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+the parameter list of this declaration is very important ; you should keep these parameters in mind ( see Table 31 — -@ 1 for descriptions ) .
+Table 31 . -@ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+Internally , zend _ function _ entry is defined as shown in Example 31 – -@ 1 .
+Example 31 – -@ 1 .
+Note :
+Table 31 , -@ 2 shows a list of all the macros that you can use to define functions .
+Table 31 2 .
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+you can see the internal definition of this module in Example 31 – -@ 2 .
+Example 31 – -@ 2 .
+for reference purposes , you can find a list of the macros involved in declared startup and shutdown functions in Table 31 --3 .
+Table 31 3 .
+back
+to the beginning
+forward
+
+PHP
+back
+Chapter 31 .
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+for a simple test procedure , you can copy it to your htdocs directory and try it with the source in Beispiel 29 --@ .
+Warning
+Example 29 – -@ 1 .
+Calling this PHP file in your Web browser should give you the output shown in Figure 29 --1 .
+Figure 29 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+Table 33 – -@ 1 , Table 33 — -@ 2 and Table 33 — -@ 3 describe these functions .
+Table 33 1 .
+Table 33 2 .
+Table 33 3 .
+this is done using zend _ hash _ update ( ) ( ) for associative arrays ( see Beispiel 33 ◀ -@ 3 ) and zend _ hash _ index _ update ( ) for indexed arrays ( see example 33 33 -@ 4 ) :
+Example 33 – -@ 3 .
+Example 33 – -@ 4 .
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+to create your own constants , you can use the macros in Table 33 6 .
+Table 33 6 .
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+this is somewhat bad practice , but Table Table 33 — -@ 5 describes macros that do exactly this task .
+Table 33 5 .
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+Example 33 – -@ 1 .
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+the corresponding type value for longs is IS _ LONG ( see Example 33 . -@ 2 ) .
+Example 33 – -@ 2 .
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+Table 33 4 .
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+Note :
+Note :
+Note :
+back
+to the beginning
+forward
+
+PHP
+back
+33
+forward
+back
+to the beginning
+forward
+
+PHP
+back
+forward
+back
+to the beginning
+forward
+
+Error : % B uses FPA â -@ instructions , but B B not
+Error : % B uses Maverick --@ instructions , but B but not
+Error : % B does not use Maverick ick -@ instructions , but % B already
+Error : % B uses software for -@ fp , while % uses uses hardware --@ fp
+Error : % B uses hardware hardware -@ fp , while % B uses software to -@ fp
+internal error : dangerous shift
+% B : Stub . -@ Entry % s cannot be created
+Transfer should be an even number
+% B ( % A + 0x % lx ) : insoluble shift against symbol &quot; % s &quot;
+% B ( % A + 0x % lx ) : shift against &quot; % s &quot; : error % d
+% B : Relocation at &quot; % A + 0x % x &quot; references the symbol &quot; % s &quot; with non-zero zero -@ Addenden
+Move reference icon not defined in the module
+r _ BFIN _ FUNCDES references a dynamic symbol with non-zero zero @ nods
+Fixups cannot be output in a read-only section
+dynamic warehouse cannot be output in a read-only section
+r _ BFIN _ FUNCDESC _ VALUE references a dynamic symbol with a non-zero --@ noden
+Transfers between different segments are not supported
+Warning : the relocation references a different segment
+% B : unsupported transfer type % i
+% s : the Not --@ fdpic ic -@ object cannot be linked into the executable fdpic â -@ file
+% s : the fpic --@ object cannot be linked into the execututNot --@ fdpic --@ file
+* * * Control the relocation % s
+% B , Section % A : Non-disvable retransfer % s against the symbol &quot; % s &quot;
+% B , Section % A : no PLT nor got for the relocation % s against the symbol &quot; % s &quot;
+% B , Section % A : no PLT for the relocation % s against the symbol &quot; % s &quot;
+&#91; the name that has been lost &#93;
+% B , Section % A : Relocation % s with non-zero --@ Adds % d against the local symbol
+% B , Section % A : Relocation % s with non-zero --@ Adds % d against the Symobl &quot; % s &quot;
+% B , Section % A : Olocation % s is not supported for the global symbol &quot; % s &quot;
+% B , Section % A : Relocation % s without created got
+% B , Section % A : Olocation % s has undefined reference by &quot; % s , &quot; perhaps a declaration error ?
+% B , Section % A : Olocation % s is not supported for the symbol &quot; % s &quot; defined outside the program , perhaps a declaration error ?
+( too many global variables for -fpic , recompile with -fPIC )
+( Thread . -@ local data too large for -fpic or -msmall --@ tls , recompile with -fPIC or -mno --@ small --@ tls )
+% B , Section % A : v10 / v32 --@ compatible object % s must not contain PIC --@ rearrangement
+% B , Section % A : the relocation % s is not valid for a shared object ; Normally a setting error , recompile with -fPIC
+% B , Section % A : the relocation % s should not take place in a shared object ; recompile with -fPIC
+% B , section &quot; % A , &quot; to symbol &quot; % s &quot; : the relocation % s should not take place in a shared object ; recompile with -fPIC
+unexpected machine number
+&#91; Symbols have a _ prefix &#93;
+&#91; v10 and v32 &#93;
+&#91; v32 &#93;
+% B : Symbols with _ prefix are used , but the file is written with prefixed-free symbols
+% B : Symbols without prefixes are used , but the file is written with symbols with _ prefix
+% B contains CRIS v32 -@ code incompatible with the previous object
+% B does not contain al. -@ CRIS v32 32 -@ code , which is incompatible with the previous object
+BFD . -@ Link error : Branch ( PC rel16 ) by section ( % s ) is not supported
+BFD . -@ Link error : jump ( PC rel26 ) by section ( % s ) is not supported
+unsupported conversion between data / insn – -@ address rooms
+Conversion requires zero --@ nods
+% H : Conversion to &quot; % s + % v &quot; may have caused the above error
+% H : Relocation of the reference symbol was not defined in the module
+% H : r _ FRV _ GETTLSOFF was not applied to a call --@ statement
+% H : r _ FRV _ GOTTLSDESC12 was not applied to the lddi â -@ statement
+% H : r _ FRV _ GOTTLSDESCHI was not applied to the sethi â -@ statement
+% H : r _ FRV _ GOTTLSDESCLO was not applied to the setlo- or setlos --@ statement
+% H : r _ FRV _ TLSDESC _ RELAX was not applied to the ldd --@ statement
+% H : r _ FRV _ GETTLSOFF _ RELAX was not applied to the call --@ statement
+% H : r _ FRV _ GOTTLSOFF12 was not applied to the ldi â -@ statement
+% H : r _ FRV _ GOTTLSOFFHI was not applied to the sethi --@ statement
+% H : r _ FRV _ GOTTLSOFFLO was not applied to the setlo- or setlos --@ statement
+% H : r _ FRV _ TLSOFF _ RELAX was not applied to a ld -@ statement
+% H : r _ FRV _ TLSMOFFHI was not applied to a sethi --@ statement
+r _ FRV _ TLSMOFFLO was not applied to a setlo- or setlos --@ statement
+% H : r _ FRV _ FUNCDESC references a dynamic symbol with non-zero --@ dends
+% H : Fixups cannot be output in read-only sections
+% H : dynamic conversions cannot be output in read-only sections
+% H : r _ FRV _ FUNCDESC _ VALUE references a dynamic symbol with a non-zero --@ dendenden
+% H : Conversion flight against &quot; % s &quot; referto a different segment
+% H : Conversion to &quot; % s &quot; : % s
+% B : unsupported conversion type % i
+% s : compiled with % s and linked against a non non non -PPIC --@ convermodule
+% s : compiled with % s and linked against a module compiled with % s
+% s : uses another unknown e _ flags ( 0x % lx ) field than the previous module ( 0x % lx )
+private flag = 0x % lx :
+% B : Conversion to generic ELF ( EM : % d )
+% B ( % A + 0x % lx ) : % s cannot be achieved , recompile with -ffunction --@ sections
+% B : Conversion % s cannot be used to create a shared object ; recompile with -fPIC
+% B : double export error % s
+% B ( % A + 0x % lx ) : % s --@ fixup for all -@ 0x % x is not supported with an unshared reference
+% B ( % A + 0x % lx ) : % s cannot be treated for % s
+.got - -@ section does not directly follow the .plt â -@ section
+% B : invalid conversion type % d
+% B : TLS â -@ transition from % s to &quot; % s &quot; at 0x % lx in section &quot; % A &quot; failed
+% B : &quot; % s &quot; accesses both the normal and the thread --@ local symbol
+% P : % B â -@ Warning : Conversion against &quot; % s &quot; in the read-only section &quot; % A. &quot;
+% P : % B â -@ Warning : Conversion to read-only section &quot; % A. &quot;
+% B : unknown conversion ( 0x % x ) in section &quot; % A &quot;
+% B : Conversion of % s to STT _ GNU _ IFUNC --@ symbol &quot; % s &quot; was not treated by % s
+Hidden symbol
+
+protected symbol
+Symbol
+% B : Conversion R _ 386 _ GOTOFF to undefined % s &quot; % s &quot; cannot be used when creating a shared object
+% B : Conversion of R _ 386 _ GOTOFF against protected function &quot; % s &quot; cannot be used when creating a shared object
+Disarded output section : &apos; % A # x27 ;
+ip2k . -@ Relaxer : Switch table without finished voting conversion information .
+ip2k . -@ Relaxer : Change broken table head .
+ip2k . -@ Linker : missing page statement at 0x % 08lx ( target = 0x % 08lx ) .
+ip2k . -@ Linker : redundant page statement at 0x % 08lx ( target = 0x % 08lx ) .
+% s : uses other e _ flags ( 0x % lx ) fields than the previous module ( 0x % lx )
+relative conversion of global pointers at _ at p gdefined
+relative address of the global pointer outside the permissible range
+internal error : Addend should be zero for R _ LM32 _ 16 _ got
+sda - -@ Conversion at _ sda _ BASE _ not defined
+% B : the target ( % s ) of a % s --@ conversion is in the wrong section ( % A )
+% B : Instrucquantity discrediscreancy to the previous module
+private flags = % lx
+: m32r . -@ Instructions
+: m32rx @ instructions
+: m32r2 @ instructions
+References to the remote symbol &quot; % s &quot; by means of a wrong conversion can end in faulty execution
+the bankaddress &#91; % lx : % 04lx &#93; ( % lx ) is not in the same bank as the currently bankded address &#91; % lx : % 04lx &#93; ( % lx )
+referenced enced to a bankaddress address &#91; % lx : % 04lx &#93; in the normal address range at % 04lx
+% B : for 16 . -@ bit --@ integer ( -mshort ) and other for 32 32 -@ bit --@ integer compiled files are linked
+% B : for 32 – -@ bit --@ Sliding ding ( -fshort --@ double ) and others for 64 --@ bit --@ Sliding of compiled files are linked
+% B : for iled CS12 HCSfiles are linked with other files compiled for HC12
+% B : uses other e _ flags ( 0x % lx ) fields than the previous module ( 0x % lx )
+&#91; abi = 32 @ bit int ,
+&#91; abi = 16 . -@ bit int ,
+64 @ bit double ,
+32 @ bit double ,
+CPU = HC11 &#93;
+CPU = HCS12 &#93;
+CPU = HC12 &#93;
+&#91; Memory = memory tank model &#93;
+&#91; Memory = flat &#93;
+unknown
+% B : got — -@ Overflow : number of conversions with 8 --@ bit --@ offset &gt; % d
+% B : got to -@ Overflow : number of conversions with 8- or 16 --@ bit --@ offset &gt; % d
+% B ( % A + 0x % lx ) : r _ 68K _ TLS _ LE32 â -@ Conversion in a shared object not allowed
+% B : Conversion % s ( % d ) is currently not supported .
+% B : unknown conversion type % d
+mep : no conversion for code % d
+MeP : how % d % d should be
+% B and % B are for different cores
+% B and % B are for different configurations
+private flags = 0x % lx
+% s : unknown conversion type % d
+% s : the target ( % s ) of a % s --@ conversion is in the wrong section ( % s )
+% B : possibly compiled without -fPIC ?
+reasonable conversion for an external symbol
+32 – -@ Bit gp --@ relative conversion for an external symbol
+dangerous conversion
+dynamic variable &quot; % s &quot; has size zero
+Generic Linker cannot treat % s
+faulty % s . -@ section in % B
+read in % s --@ section of % B not possible
+Warning : set the size of % % -@ section in % B not possible
+Memory reservation for new APUinfo -@ section failed
+calculate the new APUinfo at -@ section failed
+Installation of the new APUinfo -@ section failed
+% B : Conversion % s cannot be used when creating a shared object
+% P : % H : % s @ conversion against a local symbol
+Warning : % B uses hard floating-point numbers , % B uses soft floating-point numbers
+Warning : % B uses double-accurate hard floating-point numbers , % B uses single-accurate hard floating-point numbers
+Warning : % B uses soft floating-point numbers , % B uses simple accurate floating-point numbers
+Warning : % B uses unknown floating-point numbers – -@ ABI % d
+Warning : % B uses unknown vector --@ ABI % d
+Warning : % B uses vector --@ ABI &quot; % s , &quot; % B uses &quot; % s &quot;
+Warning : % B uses r3 / for for small structure — -@ Returns ns % B uses the memory
+Warning : % B uses unknown small structure — -@ Return --@ Convention % d
+% B : compiled with -mrelocatable and linked with normal compiled modules
+% B : compiled normally and linked with -mrelocatable compiled modules
+% P : bss - -@ plt forced because of % B
+% P : bss - -@ plt forced by profile
+% H arg lost _ _ tls _ get _ addr , TLS --@ Optimization disabled
+% P : % B : unknown conversion type for % d for symbol % s
+% P : % H : Nzero --@ Addend at % s --@ conversion against &quot; % s &quot;
+% P : % H : Conversion % s for indirect function % s is not supported
+% P : % B : the target ( % s ) of a % s -@ conversion is in the wrong output section ( % s )
+% P : % B : Conversion % s is not yet supported for the symbol s s
+% P : % H : insoluble % s --@ conversion against the symbol &quot; % s &quot;
+% P : % H : % s --@ conversion against &quot; % s &quot; : Error % d
+% P : % s is not defined in the % linker
+% B ( % A ) : Error : Calling the undefined function &quot; % s &quot;
+% B ( % A ) : Warning : undirected access to &quot; % s s icon in small data range
+% B ( % A ) : internal error : outside the permissible range
+% B ( % A ) : internal error : unsupported conversion error
+% B ( % A ) : internal error : dangerous conversion
+% B ( % A ) : internal error : unknown error
+% B : % A : Warning : outdated Red Hat conversion
+% B ( % A ) : unsecure PID --@ conversion % s at 0x % 9klx ( against % s in % s )
+Warning : rx _ SYM @ conversion with an unknown symbol
+% B ( % A + 0x % lx ) : invalid statement for TLS --@ conversion % s
+not enough got - -@ room for local got – -@ entries
+Address not alignword --@
+% s : poorly formatted conversion detected for % % detected
+% B : CALL15 conversion at 0x % lx not against global symbol
+&#91; picture &#93;
+&#91; fix dep &#93;
+% B : Warning : PIC --@ files are linked with not to -@ PIC --@ files
+% B : Import AS to -@ directive for % s conceals previous import AS
+% B : unknown .directive -@ command : % s
+% B : add renamed symbol % s failed
+% B : 0x % lx : Warning : faulty R _ sh _ uses --@ offset
+% B : 0x % lx : Warning : r _ sh _ uses points to unrecognized n n 0x % x
+% B : 0x % lx : Warning : bad R _ sh _ uses --@ loading offset
+% B : 0x % lx : Warning : could not find expected conversion
+% B : 0x % lx : Warning : unexpected symbol
+% B : 0x % lx : Warning : expected COUNT â -@ conversion not found
+% B : 0x % lx : Warning : Poor Number
+% B : 0x % lx : Fatal : conversion overflow during recovery
+unexpected STO _ SH5 _ ISA32 for local symbol is not treated
+% B : 0x % lx : Fatal : undirected branch target for recovery support conversion
+% B : 0x % lx : Fatal : unaligned % s to -@ conversion 0x % lx
+% B : 0x % lx : Fatal : r _ sh _ PSHA â -@ Conversion % d not in the range -32 .. 32
+% B : 0x % lx : Fatal : r _ sh _ PSHL h-@ Conversion % d not in the range -32 .. 32
+% B ( % A + 0x % lx ) : Fixup to &quot; % s &quot; cannot be output in read-only section
+% B ( % A + 0x % lx ) : % s --@ conversion against external symbol &quot; % s &quot;
+% X % C : conversion to &quot; % s &quot; references another segment
+% C : Warning : conversion to &quot; % s &quot; references another segment
+% B : &quot; % s &quot; accessed both as a normal and FDPIC â -@ symbol
+% B : &quot; % s &quot; accoras as an FDPIC and as thread thread --@ local symbol
+% B : Function description conversion with non-zero – -@ Addenden
+% B : TLS @ -@ local exec @ code cannot be linked into a divided object
+% s : compiled as 32 @ -@ bit --@ object , % s is 64 --@ bit
+% s : compiled as 64 @ -@ bit -object @ object , % s is 32 — -@ bit
+% s : Object size does not match the target % s
+% s : Datalabel ( -@ symbol detected in input
+PTA – -@ Disppancy : a SHmedia â -@ address ( bit 0 = = 0 )
+PTA – -@ Disppancy : a SHcompact — -@ address ( bit 0 = = 0 )
+% s : Gas - -@ Error : unexpected PTB — -@ insn with R _ sh _ pt _ 16
+% B : Error : unaligned conversion type % d at % 08x --@ conversion % p
+% s : could not advertiadded .cranges --@ entries
+% s : sorted .crange @ entries could not be written
+% B : compiled for 64 – -@ bit --@ system , but target is 32 — -@ bit
+% B : Little --@ Endian --@ files are linked with Big --@ Endian â -@ files
+% X % P : Overlay @ Section % A does not start on a cached line .
+% X % P : Overlay @ Section % A is larger than the caching line .
+% X % P : Overlay --@ Section % A is not in the caching area .
+% X % P : Overlay @ Section % A and % A do not start at the same address .
+Warning : Calling a non-function — -@ symbol % s defined in % B
+% A : 0x % v lrlive .brinfo ( % u ) differs from the analysis ( % u )
+% B is not allowed to define by % s
+you are not allowed to define % s in a script
+% s in the overlay – -@ section
+Overlay . -@ Stub . -@ Conversion overflow
+Stubs do not match calculated size
+Warning : % s overlaps % s
+Warning : % s exceeds section size
+% A : 0x % v not found not table
+% B ( % A + 0x % v ) : Call alling a non---@ code â -@ Section % B ( % A ) , analysis incomplete
+Batack analysis ignores call of % s to % s
+% s : 0x % v
+% s : 0x % v 0x % v
+
+% s % s % s
+% s double in % s
+% s double
+Sorry , no support duplicate object files in Auto — -@ Overlay --@ scripts
+not not -@ Overlay --@ Size of 0x % v plus maximum overlay â -@ Size of 0x % v exceeds local memory
+% B : % A exceeds overlay – -@ Size
+Batack size for call graph root nodes .
+Batch size for functions . Notes : &quot; * &quot; max. stack , &quot; t &quot; tail --@ call
+maximum required stack is 0x % v
+fatal error while creating .fixup
+% B ( % s + 0x % lx ) : insoluble % s --@ conversion against symbol &quot; % s &quot;
+Warning : Creating a shared library does not contain — -@ PIC --@ Code
+Warning : Creating a shared library does not contain — --PID --@ code
+% B : sB to -@ relative conversion , but _ _ c6xabi _ DSBT _ BASE is undefined
+% B : Error : Unknown required EABI --@ Object attribute % d
+% B : Error : Unknown EABI @ object attribute % d
+Error : % B requires more stack alignment than % B provides
+Error : unknown tag _ ABI _ array _ object _ alignment — -@ value in % B
+Error : unknown tag _ ABI _ array _ object _ align _ expected to -@ value in % B
+Error : % B requires more data range resolution than % B provides
+Warning : % B and % B differ in wchar _ t -@ size
+Warning : % B and % B differ in whether the code for DSBiled has been compiled
+Variable &quot; % s &quot; cannot be occupied in several small data regions
+Variable &quot; % s &quot; can only be located in one of the small , zero or tiny data regions
+Variable &quot; % s &quot; cannot be in smaller and zero --@ data region at the same time
+Variable &quot; % s &quot; cannot be in small and tiny data region at the same time
+Variable &quot; % s &quot; cannot be in zero and tiny data region at the same time
+Error when finding previous HI16 / -@ conversion
+could not find special link symbol _ _ gpp
+could not find special link symbol _ _ EP
+could not find special link symbol _ _ ctbp
+% B : Architectural discrepancy with previous module
+private falgs = % lx :
+v850 @ Architecture
+v850e . -@ Architecture
+v850e1 . -@ Architecture
+v850e2 @ Architecture
+v850e2v3 -@ Architecture
+&#91; no picture &#93;
+&#91; d . -@ float &#93;
+&#91; G . -@ float &#93;
+% s : Warning : got j-@ Addend from % ld to &quot; % s &quot; does not match with previous got -@ @ dends of % ld
+% s : Warning : PLT – -@ Addend ign% d to &quot; % s &quot; from % % from -@ section ignored
+% s : Warning : % s --@ conversion against symbol &quot; % s &quot; of % s --@ section
+% s : Warning : % s --@ conversion after 0x % x of % s --@ section
+Non-zero . -@ Addend to @ fptr --@ conversion
+% B ( % A ) : invalid property table
+% B ( % A + 0x % lx ) : Conversion offset outside the range ( size = 0x % x )
+dynamic conversion into read-only section
+TLS – -@ Conversion invalid dyndyndynsections
+internal size in consistency of the .got.loc — -@ section
+% B : incompatible machine type . Output is 0x % x. Input is 0x % x
+Try to convert L32R / CALLX to call failed
+% B ( % A + 0x % lx ) : statement could not be deciphered , possible configuration error
+% B ( % A + 0x % lx ) : Instruction for XTENSA _ ASM _ SIMPLIFY â -@ Conversion could not be deciphered ; possible configuration error
+invalid conversion address
+Overflow after relaxation
+% B ( % A + 0x % lx ) : unexpected fix for % s --@ conversion
+GPDISP --@ conversion found no ldah- and lda --@ instructions
+% B : .got @ sub-segment exceeds 64K ( size % d )
+% B : gp @ relative conversion to dynamic symbol % s
+% B : PC — -@ relative conversion against dynamic symbol % s
+% B : Change in gp : BRSGP % s
+&lt; unknown &gt;
+% B : ! samegp @ conversion against symbol without .prologue : % s
+% B : untreated dynamic conversion against % s
+% B : PC — -@ relative conversion to undefined weak symbol % s
+% B : DTP - -@ relative conversion to dynamic Symobl % s
+% B : tp @ relative conversion to dynamic symbol % s
+Stub - -@ entry for for % s cannot load .t t , dp --@ offset = % ld
+unsupported shift
+% B : 64 – -@ bit --@ files are linked to 32 — -@ bit --@ files
+Warning : Size of the symbol &quot; % s &quot; changed from % lu to % B to % lu to % B
+invalid input conversion for the production of ---ELF F , not --mmo o -format format output . Please use the copy copy copy -@ program to convert from ELF F mmo , or assemble with &quot; -no --@ expand &quot; ( for gcc , &quot; -Wa , -no --@ expand &quot; )
+invalid input conversion for the production of ---ELF F , not --mmo o -format format format output . use the copy copy copy --program program to convert ELELF mmmmo , compcompile with the gcc --@ option &quot; -mno --@ base --@ addresses . &quot;
+% s : internal inconsistency error for value left left --@ provided global registers : linked : 0x % lx % 08lx ! = relaxed : 0x % lx % 08lx
+% s : Base — -@ plus --@ Sales conversion against register symbol : ( unknown ) in % s
+% s : Base — -@ plus --@ Sales conversion against register symbol : % s in % s
+% s : Register conversion against non-registration symbol : ( unknown ) in % s
+% s : Register conversion against non-registration symbol : % s in % s
+% s : LOCAL directive is only valid with a register or absolute value
+% s : local --@ Directive : Register $ % ld is not a local register . first global register is $ % ld .
+% s : Error : Multiple definition of &quot; % s &quot; ; start of % s is set in a previously linked file
+Register section has content
+internal inconsistency : remaining % u ! = max % &amp; Please report this error .
+% P : % B : cannot generate Stub --@ entry % s
+% B : undefined symbol at R _ PPC64 _ TOCSAVE -@ conversion
+% P : dynreloc --@ calculation error for % B , section % A
+% B : .opd is not a regular data range of opd @ entries
+% B : unexpected conversion type % u in .opd â -@ section
+% B : undefined symbol &quot; % s &quot; in .opd -@ section
+% H _ _ tls _ get _ add velor argument , TLS LS -@ Optimoptimization disabled
+% s defined by remote TOC --@ Eitnrag
+% P : Long branch - -@ Stub &quot; % s &quot; set overflow
+% P : can &apos;t find branch --@ Stub &quot; % s &quot;
+% P : Branch --StuStu&quot; &quot; % s &quot; cannot be built
+% B Section % A exceeds Stub @ group size
+% P : % s . -@ offset too large for .eh _ frame — -@ stdate4 â -@ Encoding
+% P : Stub does not match the calculated size
+% P : % H : Error : % s is not a multiple of % u
+% s : Undefined version : % s
+% A has both ordered &#91; &quot; % A &quot; in % B &#93; and disordered &#91; &quot; % A &quot; in % B &#93; sections
+Warning : % s @ section has size 0
+Warning : Option gc . -@ sections ignored
+the functional table ( interpreted .pdata — -@ section content )
+wrong section index in % s
+% s : not supported
+% s : not implemented
+Object module NOT error-free !
+Error : Undefined character _ _ rtinit
+Resource directory &#91; .rsrc &#93;
+Directory &#91; .pdata &#93;
+
+Error diagnosis directory
+
+
+Directory &#91; .tls &#93;
+Download configuration directory
+Directory of incoming imports
+Import address directory
+Delay directory import
+CLR . -@ Runtime . -@ Header
+reserved
+there is an import table , but the section that contains it can not be found .
+there is an import table in % s at 0x % lx
+\ tDLL . -@ Name : % s
+there is a think , but the section containing it could not be found
+there is an export table , but the section that contains it could not be found
+there is an exable table in % s , but it does not fit into this section
+there is an export table in % s at 0x % lx
+Export - -@ Markings \ t \ t \ t % lx
+Time / date stamp \ t \ t % lx
+name \ t \ t \ t
+Number in :
+\ tExport address table \ t \ t % 08lx
+Table addresses
+\ tExport address table \ t \ t
+Sender . -@ RVA
+Export RVA
+Warning , .pdata - -@ Section size ( % ld ) is not a multiple of % d
+Glue ( -@ Source sequence
+vma : \ t \ tStart Prolog Funckion markings exception eh \ t \ tAddress Length length 32b exc Handler data
+virtual address : % 08lx block size % ld ( 0x % lx ) Number of fixups % ld
+\ tShiement % 4D offset % 4x &#91; % 4lx &#93; % s
+Characteristics 0x % x
+% B : DataDictionary &#91; 1 &#93; cannot be entered because .idata $ 2 is missing
+% B : DataDictionary &#91; 1 &#93; cannot be entered because .idata $ 4 is missing
+% B : DataDictionary &#91; 12 &#93; cannot be entered because .idata $ 5 is missing
+% B : DataDictionary &#91; PE _ Import _ ADDRESS _ TABLE ( 12 ) &#93; cannot be entered because .idata $ 6 is missing
+% B : DataDictionary &#91; 9 &#93; cannot be entered because _ _ tls _ used is missing
+Usage : % s &#91; Options ( s ) &#93; &#91; Address ( s ) &#93;
+Conversion of addresses to line numbers / filenames --@ pairs .
+if no addresses are specified in the command line , they are read by the default input .
